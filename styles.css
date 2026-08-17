@@ -1,4 +1,24 @@
 body {
     background-color: #222;
     color: #fff;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    gap: 5rem;
+}
+
+.left h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.coin-img {
+    width: 10rem;
 }
