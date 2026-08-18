@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eternal Clicker</title>
+    <script src="https://kit.fontawesome.com/20e7b179a7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="main">
         <div class="left">
-            <h3>Coins: <span class="coin-count">0</span></h3>
-            <img src="./assets/coin.png" class="coin-img"> 
+            <h3>Gems: <span class="balance">0</span></h3>
+            <div style="display: flex; justify-content: center;">
+                <i class="fa-solid fa-gem gem" onclick="incrementBalance()"></i>
+            </div>
         </div>
         <div class="right">
-            right
+            <div class="upgrade"></div>
         </div>
     </div>
     <script src="./script.js"></script>

@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sekuya&display=swap');
+
 body {
     background-color: #222;
-    color: #fff;
+    color: lavender;
     display: grid;
     place-items: center;
     height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: 'Sekuya', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .main {
@@ -19,6 +24,17 @@ body {
     margin-bottom: 1rem;
 }
 
-.coin-img {
-    width: 10rem;
+.gem {
+    cursor: pointer;
+    color: rgb(135, 85, 137);
+    scale: 2.5;
+}
+
+.gem:hover {
+    opacity: 0.9;
+}
+
+.gem:active {
+    opacity: 0.8;
+    scale: 2.8;
 }
