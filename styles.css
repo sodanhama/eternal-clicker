@@ -32,9 +32,25 @@ body {
 
 .gem:hover {
     opacity: 0.9;
+    scale: 2.4;
 }
 
 .gem:active {
     opacity: 0.8;
     scale: 2.8;
+}
+
+.upgrade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30vw;
+    height: 10vh;
+    padding: 5vh 5vw;
+    border: 1px solid lavender;
+    border-radius: 1rem;
+}
+
+.items {
+    scale: 2;
 }
