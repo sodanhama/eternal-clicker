@@ -49,8 +49,25 @@ body {
     padding: 5vh 5vw;
     border: 1px solid lavender;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 .items {
     scale: 2;
+}
+
+.next-level {
+    position: absolute;
+    right: 5vw;
+    background-color: rgb(135, 85, 137);
+    height: 10vh;
+    width: 10vw;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: none;
+}
+
+.upgrade:hover .next-level {
+    display: block;
 }
