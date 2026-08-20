@@ -1,15 +1,20 @@
 let balance = document.querySelector('.balance');
-let clickerCost = document.querySelector('.clicker-cost');
+let parsedBalance = parseFloat(balance.innerHTML);
 
 let clickerLevel = document.querySelector('.clicker-level');
-let clickerIncrease = document.querySelector('.clicker-increase');
-
+let clickerCost = document.querySelector('.clicker-cost');
 let parsedClickerCost = parseFloat(clickerCost.innerHTML);
-let parsedClickerLevel = parseFloat(clickerLevel.innerHTML);
-let parsedBalance = parseFloat(balance.innerHTML);
+let clickerIncrease = document.querySelector('.clicker-increase');
 let parsedClickerIncrease = parseFloat(clickerIncrease.innerHTML);
 
+let rocketLevel = document.querySelector('.rocket-level');
+let rocketCost = document.querySelector('.rocket-cost');
+let parsedRocketCost = parseFloat(rocketCost.innerHTML);
+let rocketIncrease = document.querySelector('.rocket-increase');
+let parsedRocketIncrease = parseFloat(rocketIncrease.innerHTML);
+
 let gpc = 1;
+let gps = 0;
 
 function incrementBalance() {
     balance.innerHTML = Math.round(parsedBalance += gpc);
@@ -28,5 +33,21 @@ function buyClicker() {
 
         parsedClickerCost *= 1.18;
         clickerCost.innerHTML = Math.round(parsedClickerCost)
+    }
+}
+
+function buyRocket() {
+    if (parsedBalance >= parsedRocketCost) {
+        balance.innerHTML = Math.round(parsedBalance -=  parsedRocketCost);
+
+        rocketLevel.innerHTML++;
+
+        parsedRocketIncrease = parseFloat((parsedRocketIncrease * 1.03).toFixed(2));
+        rocketIncrease.innerHTML = parsedRocketIncrease
+
+        gpc += parsedRocketIncrease;
+
+        parsedRocketCost *= 1.18;
+        rocketCost.innerHTML = Math.round(parsedRocketCost)
     }
 }
