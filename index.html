@@ -8,58 +8,67 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="main">
-        <div class="left">
-            <h3>Gems: <span class="balance">500</span></h3>
-            <div style="display: flex; justify-content: center;">
-                <i class="fa-solid fa-gem gem" onclick="incrementBalance()"></i>
-            </div>
-        </div>
-        <div class="right">
-            <div class="upgrade" onclick="buyClicker()">
-                <div class="left-sec">
-                    <i class="fa-solid fa-computer-mouse items"></i>
+    <section>
+        <div class="main">
+            <div class="left">
+                <h3>Gems: <span class="balance">500</span></h3>
+                <div style="display: flex; justify-content: center;">
+                    <i class="fa-solid fa-gem gem" onclick="incrementBalance()"></i>
                 </div>
-                <div class="middle-sec">
-                    <h4>Clicker</h4>
-                    <div>
-                        <span>Cost: <span class="clicker-cost">5</span></span>
-                        <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="right">
+                <div class="upgrade" onclick="buyClicker()">
+                    <div class="left-sec">
+                        <i class="fa-solid fa-computer-mouse items"></i>
+                    </div>
+                    <div class="middle-sec">
+                        <h4>Clicker</h4>
+                        <div>
+                            <span>Cost: <span class="clicker-cost">5</span></span>
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                    </div>
+                    <div class="right-sec">
+                        lvl <span class="clicker-level">0</span>
+                    </div>
+                    <div class="next-level">
+                        <p>
+                            +<span class="clicker-increase">1</span> gems <br>per click
+                        </p>
                     </div>
                 </div>
-                <div class="right-sec">
-                    lvl <span class="clicker-level">0</span>
-                </div>
-                <div class="next-level">
-                    <p>
-                        +<span class="clicker-increase">1</span> gems <br>per second
-                    </p>
-                </div>
-            </div>
 
-            <div class="upgrade" onclick="buyRocket()">
-                <div class="left-sec">
-                    <i class="fa-solid fa-rocket items"></i>
-                </div>
-                <div class="middle-sec">
-                    <h4>Rocket</h4>
-                    <div>
-                        <span>Cost: <span class="rocket-cost">50</span></span>
-                        <i class="fa-solid fa-gem"></i>
+                <div class="upgrade" onclick="buyAutoMiner()">
+                    <div class="left-sec">
+                        <i class="fa-solid fa-robot items"></i>
+                    </div>
+                    <div class="middle-sec">
+                        <h4>Auto Miner</h4>
+                        <div>
+                            <span>Cost: <span class="auto-miner-cost">850</span></span>
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                    </div>
+                    <div class="right-sec">
+                        lvl <span class="auto-miner-level">0</span>
+                    </div>
+                    <div class="next-level">
+                        <p>
+                            +<span class="auto-miner-increase">12</span> gems <br>per second
+                        </p>
                     </div>
                 </div>
-                <div class="right-sec">
-                    lvl <span class="rocket-level">0</span>
-                </div>
-                <div class="next-level">
-                    <p>
-                        +<span class="rocket-increase">4</span> gems <br>per second
-                    </p>
-                </div>
-            </div>
 
+            </div>
         </div>
-    </div>
+
+        <div class="statistics">
+            <div class="texts">
+                <p>GPC: <span id="gpc-text">1</span></p>
+                <p>GPS: <span id="gps-text">0</span></p>
+            </div>
+        </div>
+    </section>
     <script src="./script.js"></script>
 </body>
 </html>

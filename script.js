@@ -1,17 +1,20 @@
 let balance = document.querySelector('.balance');
 let parsedBalance = parseFloat(balance.innerHTML);
 
+gpcText = document.querySelector('#gpc-text');
+gpsText = document.querySelector('#gps-text');
+
 let clickerLevel = document.querySelector('.clicker-level');
 let clickerCost = document.querySelector('.clicker-cost');
 let parsedClickerCost = parseFloat(clickerCost.innerHTML);
 let clickerIncrease = document.querySelector('.clicker-increase');
 let parsedClickerIncrease = parseFloat(clickerIncrease.innerHTML);
 
-let rocketLevel = document.querySelector('.rocket-level');
-let rocketCost = document.querySelector('.rocket-cost');
-let parsedRocketCost = parseFloat(rocketCost.innerHTML);
-let rocketIncrease = document.querySelector('.rocket-increase');
-let parsedRocketIncrease = parseFloat(rocketIncrease.innerHTML);
+let autoMinerLevel = document.querySelector('.auto-miner-level');
+let autoMinerCost = document.querySelector('.auto-miner-cost');
+let parsedAutoMinerCost = parseFloat(autoMinerCost.innerHTML);
+let autoMinerIncrease = document.querySelector('.auto-miner-increase');
+let parsedAutoMinerIncrease = parseFloat(autoMinerIncrease.innerHTML);
 
 let gpc = 1;
 let gps = 0;
@@ -36,18 +39,25 @@ function buyClicker() {
     }
 }
 
-function buyRocket() {
-    if (parsedBalance >= parsedRocketCost) {
-        balance.innerHTML = Math.round(parsedBalance -=  parsedRocketCost);
+function buyAutoMiner() {
+    if (parsedBalance >= parsedAutoMinerCost) {
+        balance.innerHTML = Math.round(parsedBalance -=  parsedAutoMinerCost);
 
-        rocketLevel.innerHTML++;
+        autoMinerLevel.innerHTML++;
 
-        parsedRocketIncrease = parseFloat((parsedRocketIncrease * 1.03).toFixed(2));
-        rocketIncrease.innerHTML = parsedRocketIncrease
+        parsedAutoMinerIncrease = parseFloat((parsedAutoMinerIncrease * 1.03).toFixed(2));
+        autoMinerIncrease.innerHTML = parsedAutoMinerIncrease
 
-        gpc += parsedRocketIncrease;
+        gps += parsedAutoMinerIncrease;
 
-        parsedRocketCost *= 1.18;
-        rocketCost.innerHTML = Math.round(parsedRocketCost)
+        parsedAutoMinerCost *= 1.18;
+        autoMinerCost.innerHTML = Math.round(parsedAutoMinerCost)
     }
 }
+
+setInterval(() => {
+    parsedBalance += gps/10;
+    balance.innerHTML = Math.round(parsedBalance);
+    gpcText.innerHTML = Math.round(gpc);
+    gpsText.innerHTML = Math.round(gps);
+}, 100)

@@ -11,6 +11,7 @@ body {
     font-family: 'Sekuya', sans-serif;
     user-select: none;
     -webkit-user-select: none;
+    position: relative;
 }
 
 .main {
@@ -70,4 +71,9 @@ body {
 
 .upgrade:hover .next-level {
     display: block;
+}
+
+.statistics {
+    position: absolute;
+    bottom: 0;
 }
